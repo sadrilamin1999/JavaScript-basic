@@ -1,8 +1,11 @@
-class Book {
-  constructor(name, price) {
+class User {
+  constructor(name, email) {
     this.name = name;
-    this.price = price;
+    this.email = email;
+  }
+  print() {
+    console.log(`Name: ${this.name}, Email: ${this.email}`);
   }
 }
-const BookDetails = new Book("Wings of fire", "120tk");
-console.log(BookDetails);
+const person1 = new User("Sadril", "sadrilashuvo420@");
+console.log(person1.name, person1.email);
