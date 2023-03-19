@@ -1,3 +1,2 @@
-import { add } from "./exports";
-
-console.log(add(20, 30));
+import { name, email, age } from "./exports.js";
+console.log(name, email, age);

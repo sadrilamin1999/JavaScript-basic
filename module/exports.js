@@ -1,2 +1,3 @@
-export const add=(a,b)=>a+b;
-export const sub =(a,b)=a-b;
+export const name = "Sadril Amin";
+export const age = 15;
+export const email = "sadrilshuvo420@gmail.com";
