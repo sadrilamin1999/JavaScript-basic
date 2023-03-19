@@ -1,11 +1,10 @@
-class User {
-  constructor(name, email) {
+class Student {
+  constructor(name, id) {
     this.name = name;
-    this.email = email;
-  }
-  print() {
-    console.log(`Name: ${this.name}, Email: ${this.email}`);
+    this.id = id;
   }
 }
-const person1 = new User("Sadril", "sadrilashuvo420@");
-console.log(person1.name, person1.email);
+const s1 = new Student("Sadril Amin", 004);
+console.log(s1);
+console.log(s1.name);
+console.log(s1.id);
