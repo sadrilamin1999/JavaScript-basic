@@ -1,3 +1,3 @@
-export const name = "Sadril Amin";
-export const age = 15;
-export const email = "sadrilshuvo420@gmail.com";
+export const productInfo = ({ name, brand, price }) => {
+  return `${name} ${brand} ${price}`;
+};
