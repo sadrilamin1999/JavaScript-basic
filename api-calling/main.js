@@ -33,4 +33,9 @@ const updateData = () => {
     userId: 1,
   });
 };
-updateData();
+const updateSingleData = () => {
+  makeRequest("PATCH", "https://jsonplaceholder.typicode.com/posts/1", {
+    title: "food verse",
+  });
+};
+updateSingleData();
