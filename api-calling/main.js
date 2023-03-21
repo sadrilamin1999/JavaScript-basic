@@ -25,4 +25,12 @@ const sendData = () => {
     userId: 1,
   });
 };
-sendData();
+const updateData = () => {
+  makeRequest("PUT", "https://jsonplaceholder.typicode.com/posts/1", {
+    id: 1,
+    title: "food",
+    body: "barger",
+    userId: 1,
+  });
+};
+updateData();
