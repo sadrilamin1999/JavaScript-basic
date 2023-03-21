@@ -1,6 +1,8 @@
-const makeRequest = (req, url) => {
+const makeRequest = (req, url, data) => {
   const xhr = new XMLHttpRequest();
   xhr.open(req, url);
+
+  xhr.setRequestHeader("Content-type", "application/json");
 
   xhr.onload = () => {
     const data = xhr.response;
@@ -10,11 +12,17 @@ const makeRequest = (req, url) => {
     console.log("There is an error");
   };
 
-  xhr.send();
+  xhr.send(JSON.stringify(data));
 };
 
-const getDaata = () => {
+const getData = () => {
   makeRequest("GET", "https://jsonplaceholder.typicode.com/posts");
 };
-
-getDaata();
+const sendData = () => {
+  makeRequest("POST", "https://jsonplaceholder.typicode.com/posts", {
+    title: "foo",
+    body: "bar",
+    userId: 1,
+  });
+};
+sendData();
