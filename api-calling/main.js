@@ -38,4 +38,7 @@ const updateSingleData = () => {
     title: "food verse",
   });
 };
-updateSingleData();
+const deleteData = () => {
+  makeRequest("DELETE", "https://jsonplaceholder.typicode.com/posts/1");
+};
+deleteData();
