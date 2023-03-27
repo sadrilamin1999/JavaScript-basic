@@ -1,14 +1,11 @@
 fetch("https://jsonplaceholder.typicode.com/posts/1", {
-  // update methood
-  method: "PUT",
+  // patch update a single data
+  method: "PATCH",
   headers: {
     "Content-type": "application/json; charset=UTF-8",
   },
   body: JSON.stringify({
-    id: 1,
-    title: "food verse",
-    body: "bar bar",
-    userId: 1,
+    title: "food pagla",
   }),
 })
   .then((res) => {
