@@ -55,7 +55,7 @@ sendData(); */
 updateData(); */
 
 // update a single data
-const updateSingleData = () => {
+/* const updateSingleData = () => {
   makeRequest("https://jsonplaceholder.typicode.com/posts/1", {
     method: "PATCH",
     headers: {
@@ -68,4 +68,14 @@ const updateSingleData = () => {
     .then((res) => console.log(res))
     .catch((error) => console.log(error));
 };
-updateSingleData();
+updateSingleData(); */
+
+// delete data
+const deleteData = () => {
+  makeRequest("https://jsonplaceholder.typicode.com/posts/1", {
+    method: "DELETE",
+  })
+    .then((res) => console.log(res))
+    .catch((error) => console.log(error));
+};
+deleteData();
