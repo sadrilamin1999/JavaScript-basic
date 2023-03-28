@@ -37,7 +37,7 @@ getData(); */
 sendData(); */
 
 // update request
-const updateData = () => {
+/* const updateData = () => {
   makeRequest("https://jsonplaceholder.typicode.com/posts", {
     method: "PUT",
     headers: {
@@ -52,4 +52,20 @@ const updateData = () => {
     .then((res) => console.log(res))
     .catch((error) => console.log(error));
 };
-updateData();
+updateData(); */
+
+// update a single data
+const updateSingleData = () => {
+  makeRequest("https://jsonplaceholder.typicode.com/posts/1", {
+    method: "PATCH",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+    body: JSON.stringify({
+      title: "foo hunter",
+    }),
+  })
+    .then((res) => console.log(res))
+    .catch((error) => console.log(error));
+};
+updateSingleData();
