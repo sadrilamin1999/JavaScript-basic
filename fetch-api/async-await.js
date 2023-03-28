@@ -1,5 +1,5 @@
-const makeRequest = async (url) => {
-  const res = await fetch(url);
+const makeRequest = async (url, config) => {
+  const res = await fetch(url, config);
 
   if (!res.ok) {
     const message = `Error: ${res.status}`;
@@ -10,9 +10,28 @@ const makeRequest = async (url) => {
   return data;
 };
 
+/* // get request
 const getData = () => {
   makeRequest("https://jsonplaceholder.typicode.com/posts")
     .then((res) => console.log(res))
     .catch((error) => console.log(error));
 };
-getData();
+getData(); */
+
+// post request
+const sendData = () => {
+  makeRequest("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+    body: JSON.stringify({
+      title: "foo",
+      body: "bar",
+      userId: 1,
+    }),
+  })
+    .then((res) => console.log(res))
+    .catch((error) => console.log(error));
+};
+sendData();
