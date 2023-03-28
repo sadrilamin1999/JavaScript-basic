@@ -19,7 +19,7 @@ const getData = () => {
 getData(); */
 
 // post request
-const sendData = () => {
+/* const sendData = () => {
   makeRequest("https://jsonplaceholder.typicode.com/posts", {
     method: "POST",
     headers: {
@@ -34,4 +34,22 @@ const sendData = () => {
     .then((res) => console.log(res))
     .catch((error) => console.log(error));
 };
-sendData();
+sendData(); */
+
+// update request
+const updateData = () => {
+  makeRequest("https://jsonplaceholder.typicode.com/posts", {
+    method: "PUT",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+    body: JSON.stringify({
+      title: "foo mone",
+      body: "bar bar",
+      userId: 1,
+    }),
+  })
+    .then((res) => console.log(res))
+    .catch((error) => console.log(error));
+};
+updateData();
