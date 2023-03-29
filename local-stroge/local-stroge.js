@@ -7,4 +7,8 @@ const countries = [
   "England",
   "France",
 ];
-localStorage.setItem("countries", JSON.stringify(countries));
+/* localStorage.setItem("countries", JSON.stringify(countries));
+ */
+// get data
+const countriesList = JSON.parse(localStorage.getItem("countries"));
+console.log(countriesList);
