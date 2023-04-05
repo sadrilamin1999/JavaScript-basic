@@ -10,6 +10,7 @@ function changeHandler(e) {
   console.log(value);
 }
  */
+// checkbox
 const programs = document.querySelectorAll("input[name=program]");
 
 Array.from(programs).map((program) => {
@@ -20,4 +21,12 @@ function changeHanlder(e) {
   if (e.target.checked) {
     console.log(e.target.value);
   }
+}
+
+// option
+const depertment = document.querySelector("#depertment");
+
+depertment.addEventListener("change", depertmentHandler);
+function depertmentHandler(e) {
+  console.log(e.target.value);
 }
