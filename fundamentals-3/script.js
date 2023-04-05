@@ -16,5 +16,14 @@ const { fristName, birthYear } = sutdent;
 const numbers = [1, 2, 3, 4, 5];
 const newNumbers = [...numbers];
 numbers.pop();
-console.log(numbers);
-console.log(newNumbers);
+// console.log(numbers);
+// console.log(newNumbers);
+
+const human = {
+  name: "Habib",
+  language: "C++",
+};
+const animal = { ...human };
+animal.name = "Lion";
+console.log(human);
+console.log(animal);
