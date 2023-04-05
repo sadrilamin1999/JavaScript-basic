@@ -25,5 +25,17 @@ const human = {
 };
 const animal = { ...human };
 animal.name = "Lion";
-console.log(human);
-console.log(animal);
+// console.log(human);
+// console.log(animal);
+
+// loop in objects
+const player = {
+  name: "messi",
+  country: "argentina",
+  goal: 800,
+};
+const palyerEnries = Object.entries(player);
+
+for (const [key, value] of palyerEnries) {
+  console.log(key, value);
+}
