@@ -37,5 +37,5 @@ const player = {
 const palyerEnries = Object.entries(player);
 
 for (const [key, value] of palyerEnries) {
-  console.log(key, value);
+  // console.log(key, value);
 }
