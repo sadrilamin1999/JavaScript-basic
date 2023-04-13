@@ -36,4 +36,17 @@ const myFun = person.calcAge.apply(person2);
 
 // bind
 const myFun2 = person.calcAge.bind(person2);
-console.log(myFun2());
+// console.log(myFun2());
+
+// set
+const mySet = new Set();
+mySet.add(5);
+mySet.add(15);
+mySet.add("Sadril");
+mySet.add(true);
+mySet.delete(15);
+// console.log(mySet);
+
+const arr = [2, 6, 3, 5, 4, 6, 5, 0, 8, 2, 8];
+const uniq = [...new Set(arr)];
+// console.log(uniq);
