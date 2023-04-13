@@ -50,3 +50,15 @@ mySet.delete(15);
 const arr = [2, 6, 3, 5, 4, 6, 5, 0, 8, 2, 8];
 const uniq = [...new Set(arr)];
 // console.log(uniq);
+
+// maps
+const zoo = new Map();
+zoo.set("tiger", 5);
+zoo.set("moneky", 10);
+zoo.set("lion", 10);
+zoo.set("elephent", 3);
+// console.log(zoo);
+
+for (const [property, value] of zoo) {
+  // console.log(property, value);
+}
