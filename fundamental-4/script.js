@@ -62,3 +62,8 @@ zoo.set("elephent", 3);
 for (const [property, value] of zoo) {
   // console.log(property, value);
 }
+
+// filter
+const nuns = [10, 23, 20, 40, 35, 75];
+const filteredNums = nuns.filter((num) => num % 2 !== 0);
+// console.log(filteredNums);
