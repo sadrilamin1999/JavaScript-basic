@@ -1,69 +1,79 @@
 // frist-class and higher order function
-
 function double(number) {
   return number * 2;
 }
-function threeple(number) {
+function triple(number) {
   return number * 3;
 }
-
-function transformer(num, fn) {
-  return fn(num);
+function transformer(number, fn) {
+  return fn(number);
 }
-// console.log(transformer(25, double));
-// console.log(transformer(10, threeple));
+console.log(transformer(5, double));
+console.log(transformer(7, triple));
 
-// call
-const person = {
+// IIFE
+(function () {
+  console.log("I am run just for one time");
+})();
+
+// call apply and bind
+
+const person1 = {
   name: "Sadril",
-  birthYear: 1996,
+  birthyear: 1996,
 
-  calcAge() {
-    return new Date().getFullYear() - this.birthYear;
+  calcAge(name) {
+    return `${new Date().getFullYear() - this.birthyear} ${name}`;
   },
 };
-
 const person2 = {
-  name: "Sadril",
-  birthYear: 1999,
+  name: "Amin",
+  birthyear: 1999,
 };
-// console.log(person.calcAge());
-// console.log(person.calcAge.call(person2));
+console.log(person1.calcAge());
+console.log(person1.calcAge.call(person2, "Shuvo"));
+const myFun = person1.calcAge.apply(person2, ["Habib"]);
+console.log(myFun);
+const myFun2 = person1.calcAge.bind(person2, "Alif");
+console.log(myFun2());
 
-// apply
-const myFun = person.calcAge.apply(person2);
-// console.log(myFun);
+// sets
+const arr = [2, 4, 2, 6, 4, 6, 2, 5];
+const uniqueArr = [...new Set(arr)];
+console.log(uniqueArr);
 
-// bind
-const myFun2 = person.calcAge.bind(person2);
-// console.log(myFun2());
-
-// set
-const mySet = new Set();
-mySet.add(5);
-mySet.add(15);
-mySet.add("Sadril");
-mySet.add(true);
-mySet.delete(15);
-// console.log(mySet);
-
-const arr = [2, 6, 3, 5, 4, 6, 5, 0, 8, 2, 8];
-const uniq = [...new Set(arr)];
-// console.log(uniq);
-
-// maps
+// Map
 const zoo = new Map();
-zoo.set("tiger", 5);
-zoo.set("moneky", 10);
-zoo.set("lion", 10);
-zoo.set("elephent", 3);
-// console.log(zoo);
+zoo.set("tiger", 4);
+zoo.set("monkey", 6);
+zoo.set("lion", 2);
 
-for (const [property, value] of zoo) {
-  // console.log(property, value);
+for (const [animel, count] of zoo) {
+  console.log(animel, count);
 }
 
+// Array
+const arr1 = [2, 3, 5, 6, 7, 8];
+const arr2 = [10, 12, 13, 14, 16, 18];
+const arr3 = arr1.concat(arr2);
+const arrFinal = [...arr1, ...arr2];
+console.log(arr1.length);
+console.log(arr1.at(0));
+console.log(arr1.at(-1));
+console.log(arr3);
+console.log(arrFinal);
+
+// every
+const nums = [5, 10, 15, 20, 25, 30, 35, 40];
+
+const isFiveMode = nums.every((num) => num % 5 === 0);
+console.log(isFiveMode);
+
 // filter
-const nuns = [10, 23, 20, 40, 35, 75];
-const filteredNums = nuns.filter((num) => num % 2 !== 0);
-// console.log(filteredNums);
+const oddNums = nums.filter((num) => num % 2 !== 0);
+console.log(oddNums);
+
+// find
+const nums2 = [5, 10, 15, 20, 25, 30, 35, 40];
+const findNum = nums2.find((num) => num % 5 === 0 && num % 4 === 0);
+console.log(findNum);
