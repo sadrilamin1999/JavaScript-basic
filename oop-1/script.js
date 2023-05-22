@@ -42,3 +42,27 @@ const cat1 = new Cat("Hnagry", 2018);
 cat1.calAge();
 cat1.greet();
  */
+
+// ES-6 Classes
+class Student {
+  constructor(name) {
+    this.name = name;
+  }
+  greet() {
+    console.log(`Hello, ${this.name}`);
+  }
+}
+
+class FristBoy extends Student {
+  constructor(name, birthYear) {
+    super(name);
+    this.birthYear = birthYear;
+  }
+  calAge() {
+    console.log(`age: ${new Date().getFullYear() - this.birthYear}`);
+  }
+}
+
+const student1 = new FristBoy("Amin", 1998);
+student1.greet();
+student1.calAge();
