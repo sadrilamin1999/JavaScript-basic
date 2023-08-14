@@ -1,11 +1,13 @@
-// Update a resource
-fetch("https://jsonplaceholder.typicode.com/posts/1", {
-  method: "PATCH",
+// Creationg a resource - post
+fetch("https://jsonplaceholder.typicode.com/posts", {
+  method: "POST",
   headers: {
     "Content-type": "application/json; charset=UTF-8",
   },
   body: JSON.stringify({
-    title: "Orange",
+    title: "Mango",
+    body: "food",
+    id: 1,
   }),
 })
   .then((res) => {
