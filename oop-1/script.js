@@ -6,12 +6,16 @@ class Player {
     this.age = age;
     this.skill = skill;
   }
+  playerDetail() {
+    return `${this.name} is a ${this.skill}`;
+  }
 }
 
 const messi = new Player("Messi", 36, "Footballler");
-console.log(messi);
+console.log(messi.playerDetail());
 const moinAli = new Player("Moin Ali", 35, "Cricketer");
 console.log(moinAli);
+console.log(moinAli.playerDetail());
 
 // inheritance
 class Father extends Player {
