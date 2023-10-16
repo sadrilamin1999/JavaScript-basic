@@ -1,14 +1,24 @@
-const user = {
-  name: "Sadril",
-  Id: 2023,
-  age: 25,
-  lover: {
-    name: "Janina",
-    age: 18,
-  },
+const submitBtn = document.getElementById("submit-btn");
+const submitHandler = () => {
+  const title = document.getElementById("title").value;
+  const body = document.getElementById("body").value;
+  const id = document.getElementById("id").value;
+  postToSurver(title, body, id);
 };
-console.log(user);
-const userJson = JSON.stringify(user);
-console.log(userJson);
-const userParse = JSON.parse(userJson);
-console.log(userParse);
+submitBtn.addEventListener("click", () => submitHandler());
+
+const postToSurver = (title, body, id) => {
+  fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    body: JSON.stringify({
+      title: title,
+      body: body,
+      userId: id,
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+};
