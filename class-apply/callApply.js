@@ -1,15 +1,19 @@
 const normalPerson = {
   fristName: "Sadril",
   lastName: "Amin",
-  salary: 18000,
-  fullName: function () {
-    console.log(this.fristName, this.lastName);
-  },
+  salary: 20000,
   billCharge: function (amount) {
-    this.salary = this.salary - amount;
-    return this.salary;
+    return (this.salary = this.salary - amount);
   },
 };
-
 normalPerson.billCharge(5000);
-console.log(normalPerson.salary);
+
+const spacialPerson = {
+  fristName: "Abu",
+  lastName: "Kalam",
+  salary: 35000,
+};
+
+const spacialPersonBillCharge = normalPerson.billCharge.bind(spacialPerson);
+spacialPersonBillCharge(15000);
+console.log(spacialPerson.salary);
