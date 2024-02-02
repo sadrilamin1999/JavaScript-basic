@@ -6,8 +6,8 @@ for (let i = 2; i <= 10; i++) {
 console.log(fibo);
 
 // factorial
-let number = 1;
+/* let number = 1;
 for (let i = 2; i <= 10; i++) {
   number = number + i;
 }
-console.log(number);
+console.log(number); */
