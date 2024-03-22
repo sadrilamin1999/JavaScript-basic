@@ -10,6 +10,8 @@ console.log(y); // can't access before initialization
 a= 5; 
 console.log(a);  // assainment to constant variable
 
-z = 6;
+z = 6; // tepmrelly date zone (tdz)
 let z;
 console.log(z);
+
+
