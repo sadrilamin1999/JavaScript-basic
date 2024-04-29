@@ -1,4 +1,5 @@
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const words = ["spray", "elite", "exuberant", "destruction", "present"];
 
-console.log(fruits.splice(2, 1));
-console.log(fruits);
+const result = words.filter((word) => word.length > 6);
+
+console.log(result);
